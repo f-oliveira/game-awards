@@ -1,10 +1,10 @@
-package me.dio.gameawards;
+package me.gameawards;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GameAwardsApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
