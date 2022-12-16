@@ -16,5 +16,12 @@ public interface GameService {
 
     void delete(Long entity_id);
 
+    /**
+     * Metódo responsável por contabilizar um voto para um {@link Game}.
+     *
+     * @param gameId Identificador (ID) do {@link Game}.
+     */
+    public void vote(Long gameId);
+
 
 }

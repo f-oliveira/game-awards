@@ -44,4 +44,17 @@ public class GameRestController extends BaseRestController {
         return ResponseEntity.ok().build();
     }
 
+    /**
+     * Enpoint que vota em um {@link Game} específico, também consumido pelo App React Native:<br>
+     * <a href="https://youtu.be/Ity0Aa_ytPM">DIO Fullstack Labs - Dia 1 (API Java 17)<a/><br>
+     * <a href="https://youtu.be/QXeXmKPOmvo">DIO Fullstack Labs - Dia 2 (App React Native)<a/>
+     *
+     * @param id Identificador do {@link Game} para contabilizarmos o voto.
+     */
+    @PatchMapping("games/{id}/vote")
+    public ResponseEntity<Void> vote(@PathVariable Long id) {
+        this.businessLayer.vote(id);
+        return ResponseEntity.ok().build();
+    }
+
 }
